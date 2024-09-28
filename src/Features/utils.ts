@@ -2,7 +2,8 @@ import Axios from "axios";
 import { store } from "../Store/store";
 import { getNewAccessToken } from "./User/userSlice";
 
-const baseURL = "http://127.0.0.1:3100/";
+const baseURL =
+  "https://ayib-server-aphre7dxfyfgfncj.eastus-01.azurewebsites.net/"; //"http://127.0.0.1:3100/";
 
 export const axios = Axios.create({ baseURL });
 

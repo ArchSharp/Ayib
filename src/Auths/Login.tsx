@@ -34,7 +34,7 @@ export const Login = () => {
     Email: Yup.string().required("Email is required"),
     Password: Yup.string()
       .min(6, "Must not be less than 6 characters")
-      .required("Required")
+      .required("Password is required")
       .matches(/^(?=.*[a-z])/, "Must contain at least one lowercase character")
       .matches(/^(?=.*[A-Z])/, "Must contain at least one uppercase character")
       .matches(/^(?=.*[0-9])/, "Must contain at least one number")
