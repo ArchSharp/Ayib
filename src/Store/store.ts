@@ -37,8 +37,8 @@ export const store = configureStore({
       serializableCheck: {
         ignoredActions: [FLUSH, REHYDRATE, PAUSE, PERSIST, PURGE, REGISTER],
       },
-    }).concat(middleware),
-  devTools: process.env.NODE_ENV !== "production",
+    }).concat(process.env.REACT_APP_ENV !== "production" ? middleware : []),
+  devTools: process.env.REACT_APP_ENV !== "production",
 });
 
 export const persistedStore = persistStore(store);
